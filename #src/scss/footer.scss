@@ -1,0 +1,73 @@
+.footer {
+    padding: 200px 0px 100px;
+    background-color: $fiol;
+    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+    @media (max-width: $md4 + px) {
+        padding: 200px 0px 50px;
+    }
+    @media (max-width: $md3 + px) {
+        padding: 230px 0px 50px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 90px;
+        @media (max-width: 1180px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__logo {
+        @media (max-width: 1180px) {
+            margin-bottom: 40px;
+        }
+    }
+    &__logo-text {
+        color: #fff;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $md3 + px) {
+            flex-direction: column;
+        }
+    }
+    &__item {
+        margin-right: 40px;
+        text-transform: uppercase;
+        &:last-child {
+            margin-right: 0px;
+        }
+        @media (max-width: 1400px) {
+            margin-right: 20px;
+        }
+        @media (max-width: 1180px) {
+            margin-right: 10px;
+        }
+        @media (max-width: $md2 + px) {
+            margin-bottom: 20px;
+            margin-right: 0px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    &__link {
+        color: #fff;
+    }
+    &__send {
+        padding: 15px 40px;
+        background-color: $red;
+        color: #fff;
+        clip-path: $poligon-100-75;
+        @media (max-width: $md2 + px) {
+            margin-top: 25px;
+        }
+    }
+    &__copy {
+        text-align: center;
+        font-weight: 300;
+        color: #f3f3f3;
+    }
+}

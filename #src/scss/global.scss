@@ -1,0 +1,115 @@
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1520;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+*,
+*::after,
+*::before {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+html,
+body {
+    min-width: 320px;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: $accentBlack;
+    background-color: #f5f3f8;
+    letter-spacing: 0.005em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+    margin: 0px;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F3F8;;
+}
+
+.container {
+    max-width: $maxWidthContainer + px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    @media (max-width: $md1+px) {
+        max-width: 1300px;
+    }
+    @media (max-width: $md2+px) {
+        max-width: 1000px;
+    }
+    @media (max-width: $md3+px) {
+        max-width: none;
+        padding: 0px 10px;
+    }
+}
+
+.btn{
+    padding: 19px 48px;
+    color: $red;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    @media (max-width: 1270px) {
+        padding: 15px 30px;
+    }
+}

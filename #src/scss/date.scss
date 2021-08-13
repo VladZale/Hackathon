@@ -1,0 +1,109 @@
+.date {
+    padding: 100px 0px;
+    background: #884bb2;
+    position: relative;
+    @media (max-width: $md3 + px) {
+        padding: 40px 0px;
+    }
+    &__box {
+        font-size: 15px;
+        color: #fff;
+        background-color: #884bb2;
+        position: absolute;
+        width: 285px;
+        height: 285px;
+        padding: 15px 25px;
+        bottom: 20%;
+        left: 10%;
+        z-index: 3;
+        transform: translateY(-50%);
+        &::before {
+            content: "";
+            transform-origin: top;
+            position: absolute;
+            width: 285px;
+            height: 405px;
+            background: linear-gradient(238.14deg, #9b67cc 13.52%, rgba(212, 185, 228, 0.8) 87.33%);
+            top: 100%;
+            left: 0;
+            transform: skew(-45deg);
+            @media (max-width: $md3 + px) {
+                width: 190px;
+            }
+        }
+        &::after {
+            content: "";
+            transform-origin: bottom;
+            position: absolute;
+            width: 400px;
+            height: 375px;
+            background: linear-gradient(212.82deg, #8266cc 12.26%, rgba(199, 180, 226, 0.8) 87.35%);
+            top: 40%;
+            right: 100%;
+            transform: skewX(-9.2deg) skewY(-53deg) rotate3d(55, 80, -2.5, 40deg);
+            @media (max-width: $md3 + px) {
+                width: 265px;
+                height: 250px;
+            }
+        }
+        @media (max-width: 1450px) {
+            left: 5%;
+        }
+        @media (max-width: $md2 + px) {
+            left: 0;
+        }
+        @media (max-width: $md3 + px) {
+            width: 190px;
+            height: 190px;
+            top: 10%;
+            padding: 10px;
+        }
+        @media (max-width: $md4 + px) {
+            top: 0;
+            left: 2%;
+        }
+    }
+    &__box-title {
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        line-height: 142%;
+        @media (max-width: $md3 + px) {
+            margin-bottom: 0px;
+        }
+    }
+    &__box-day {
+        line-height: 142%;
+        font-size: 84px;
+        margin-bottom: 30px;
+        @media (max-width: $md3 + px) {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+    }
+    &__box-time {
+        max-width: 210px;
+    }
+    &__desc {
+        max-width: 900px;
+        margin: auto 0 0 auto;
+        font-size: 30px;
+        line-height: 142%;
+        letter-spacing: 0.035em;
+        color: #daa925;
+        @media (max-width: 1300px) {
+            max-width: 600px;
+            font-size: 25px;
+        }
+        @media (max-width: $md2 + px) {
+            font-size: 20px;
+            max-width: 450px;
+        }
+        @media (max-width: $md3 + px) {
+            font-size: 16px;
+            max-width: 260px;
+        }
+        @media (max-width: $md4 + px) {
+            padding-top: 200px;
+        }
+    }
+}

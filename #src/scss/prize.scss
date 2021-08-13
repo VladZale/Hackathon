@@ -1,0 +1,88 @@
+.prize {
+    padding: 150px 0px;
+    background-color: #daa926;
+    @media (max-width: 1200px) {
+        padding: 100px 0px;
+    }
+    @media (max-width: $md3 + px) {
+        padding: 70px 0px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        @media (max-width: $md3 + px) {
+            justify-content: center;
+        }
+        @media (max-width: $md4 + px) {
+            justify-content: flex-start;
+        }
+    }
+    &__img {
+        height: 550px;
+        width: 200px;
+        position: absolute;
+        bottom: 40%;
+        left: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        & img {
+            height: 100%;
+            width: 100%;
+        }
+        @media (max-width: 1200px) {
+            height: 330px;
+            bottom: 50%;
+        }
+        @media (max-width: $md2 + px) {
+            width: 150px;
+            left: 0;
+            align-items: center;
+        }
+        @media (max-width: $md4 + px) {
+            bottom: 65%;
+        }
+    }
+    &__price {
+        font-weight: 900;
+        font-size: 150px;
+        line-height: 125%;
+        letter-spacing: 0.015em;
+        color: #884bb2;
+        max-width: 600px;
+        @media (max-width: 1200px) {
+            font-size: 90px;
+        }
+        @media (max-width: $md2 + px) {
+            font-size: 70px;
+        }
+        @media (max-width: $md4 + px) {
+            font-size: 45px;
+        }
+    }
+    &__info {
+        @media (max-width: $md3 + px) {
+            padding-top: 180px;
+        }
+    }
+    &__text {
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 115%;
+        letter-spacing: 0.015em;
+        color: $red;
+        max-width: 350px;
+        margin-bottom: 95px;
+        @media (max-width: 1200px) {
+            margin-bottom: 55px;
+        }
+        @media (max-width: $md2 + px) {
+            font-size: 45px;
+        }
+        @media (max-width: $md3 + px) {
+            font-size: 38px;
+            max-width: 250px;
+        }
+    }
+}

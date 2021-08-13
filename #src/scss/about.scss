@@ -1,0 +1,95 @@
+.about {
+    position: relative;
+    max-width: 800px;
+    height: 400px;
+    color: #fff;
+    bottom: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    &__inner {
+        position: relative;
+        max-width: 800px;
+        height: 400px;
+        @media (max-width: $md2 + px) {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+        @media (max-width: $md3 + px) {
+            max-width: 400px;
+        }
+        @media (max-width: $md4 + px) {
+            max-width: 300px;
+        }
+    }
+    &__title,
+    &__desc {
+        position: absolute;
+    }
+    &__title {
+        text-align: center;
+        background-color: $red;
+        padding: 40px 92px;
+        font-size: 50px;
+        line-height: 59px;
+        max-width: 400px;
+        clip-path: $poligon-100-75;
+        z-index: 2;
+        top: 0;
+        left: 8%;
+        @media (max-width: 1080px) {
+            padding: 30px 65px;
+            font-size: 40px;
+            top: 10%;
+        }
+        @media (max-width: $md2 + px) {
+            font-size: 30px;
+            top: 25%;
+            padding: 20px 50px;
+        }
+        @media (max-width: $md3 + px) {
+            font-size: 20px;
+            top: 35%;
+            padding: 5px 40px;
+        }
+        @media (max-width: $md4 + px) {
+            font-size: 18px;
+            top: 45%;
+            padding: 0px 25px;
+        }
+        @media (max-width:370px) {
+            top:55%;
+        }
+    }
+    &__desc {
+        background-color: $fiol;
+        padding: 75px 132px 117px;
+        text-align: left;
+        font-size: 22px;
+        line-height: 34px;
+        top: 80px;
+        clip-path: $poligon-90-80;
+        @media (max-width: 1080px) {
+            padding: 67px 60px 80px;
+            font-size: 20px;
+            top: 115px;
+        }
+        @media (max-width: $md2 + px) {
+            padding: 45px 55px 60px;
+            top: 155px;
+            font-size: 18px;
+        }
+        @media (max-width: $md3 + px) {
+            padding: 40px 30px 35px;
+            top: 180px;
+            font-size: 16px;
+        }
+        @media (max-width: $md4 + px) {
+            padding: 25px 10px 30px;
+            top: 210px;
+            font-size: 16px;
+        }
+        @media (max-width:370px) {
+            top: 260px;
+        }
+    }
+}

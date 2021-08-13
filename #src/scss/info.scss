@@ -1,0 +1,232 @@
+.info {
+    margin-top: -150px;
+    padding: 0px 0px 100px;
+    @media (max-width: $md3 + px) {
+        padding: 0px;
+    }
+    @media (max-width: $md4 + px) {
+        margin-top: 5px;
+    }
+    &__btn--svg {
+        transition: fill 0.5s ease-in-out;
+        &:hover {
+            fill: $red;
+        }
+        &:hover .info__text--svg {
+            fill: #fff;
+        }
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $md3 + px) {
+            flex-direction: column;
+        }
+    }
+    &__item {
+        flex: 1 1 50%;
+        position: relative;
+    }
+    &__item-start {
+        min-height: 1100px;
+        position: relative;
+        @media (max-width: $md3 + px) {
+            min-height: 900px;
+        }
+    }
+    &__item-end {
+        max-width: 460px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 400px;
+        @media (max-width: $md2 + px) {
+            max-width: 300px;
+        }
+        @media (max-width: $md3 + px) {
+            max-width: 100%;
+        }
+    }
+    &__desc {
+        margin-bottom: 90px;
+        font-size: 22px;
+        line-height: 34px;
+        letter-spacing: 0.035em;
+        @media (max-width: $md3 + px) {
+            margin-bottom: 70px;
+            font-size: 27px;
+        }
+    }
+    &__box {
+        position: absolute;
+        padding: 83px 31px 20px 28px;
+        max-width: 285px;
+        top: 0;
+        color: #fff;
+        @media (max-width: $md3 + px) {
+            padding: 10px 30px 5px 20px;
+            max-width: 190px;
+        }
+    }
+
+    &__box-blue,
+    &__box-fiol,
+    &__box-red {
+        z-index: 2;
+        &::before {
+            content: "";
+            transform-origin: top;
+            position: absolute;
+            width: 285px;
+            height: 405px;
+            left: 0;
+            top: 100%;
+            transform: skew(-45deg);
+            @media (max-width: $md3 + px) {
+                width: 190px;
+            }
+        }
+        &::after {
+            content: "";
+            transform-origin: bottom;
+            position: absolute;
+            width: 423px;
+            height: 361px;
+            transform: skewX(-8.5deg) skewY(-52deg) rotate3d(66.99, 123, -3.5, 41deg);
+            right: 96%;
+            top: 44%;
+            @media (max-width: $md3 + px) {
+                width: 280px;
+                height: 240px;
+            }
+        }
+    }
+
+    &__box-blue {
+        background-color: #16c3d4;
+        left: 60%;
+        width: 285px;
+        transform: translateX(-50%);
+        &::before {
+            background: linear-gradient(235.65deg, #66caca 13%, rgba(189, 236, 236, 0.8) 84.71%);
+        }
+        &::after {
+            background: linear-gradient(207.77deg, #6682cb 12.08%, rgba(102, 130, 203, 0.5) 89.8%);
+        }
+        @media (max-width: 1270px) {
+            top: -5%;
+        }
+        @media (max-width: $md3 + px) {
+            left: 35%;
+            top: 0;
+        }
+        @media (max-width: $md4 + px) {
+            left: 30%;
+        }
+    }
+    &__box-fiol {
+        background-color: #884bb2;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        &::before {
+            background: linear-gradient(238.14deg, #9b67cc 13.52%, rgba(212, 185, 228, 0.8) 87.33%);
+        }
+        &::after {
+            background: linear-gradient(212.82deg, #8266cc 12.26%, rgba(199, 180, 226, 0.8) 87.35%);
+        }
+        @media (max-width: $md2 + px) {
+            top: 60%;
+        }
+        @media (max-width: $md3 + px) {
+            top: 55%;
+            left: 10%;
+        }
+        @media (max-width: $md4 + px) {
+            top: 60%;
+            left: 0%;
+        }
+    }
+    &__box-red {
+        background-color: $red;
+        left: 10%;
+        top: 20%;
+        &::before {
+            background: linear-gradient(210.22deg, #e44e4d 14.71%, rgba(232, 156, 148, 0.8) 97.02%);
+        }
+        &::after {
+            background: linear-gradient(189.97deg, #cb66c6 12.61%, rgba(211, 136, 201, 0.8) 100.97%);
+        }
+        @media (max-width: 1230px) {
+            left: 5%;
+        }
+        @media (max-width: $md2 + px) {
+            left: 0;
+        }
+        @media (max-width: $md3 + px) {
+            left: 50%;
+            top: 25%;
+        }
+        @media (max-width: $md4 + px) {
+            left: 45%;
+        }
+        @media (max-width: 350px) {
+            left: 30%;
+        }
+    }
+    &__box-smal {
+        width: 100px;
+        height: 100px;
+        padding: 0px;
+    }
+    &__box-orange {
+        z-index: 1;
+        background-color: #fc9d63;
+        left: 80%;
+        top: 21%;
+        &::before {
+            content: "";
+            transform-origin: top;
+            position: absolute;
+            width: 285px;
+            height: 405px;
+            left: 0;
+            top: 100%;
+            transform: skew(-45deg);
+            width: 100px;
+            height: 150px;
+            background: linear-gradient(225.26deg, #cb7866 25.37%, rgba(210, 136, 117, 0.6) 109.91%);
+        }
+        &::after {
+            content: "";
+            transform-origin: bottom;
+            position: absolute;
+            transform: skewX(-8.5deg) skewY(-52deg) rotate3d(66.99, 123, -3.5, 41deg);
+            width: 150px;
+            height: 130px;
+            background: linear-gradient(207.85deg, #e5ca87 5.54%, rgba(234, 229, 197, 0.8) 86.65%);
+            right: 96%;
+            top: 45%;
+        }
+        @media (max-width: 1230px) {
+            top: 25%;
+            left: 70%;
+        }
+        @media (max-width: $md3 + px) {
+            left: 60%;
+            top: 10%;
+        }
+        @media (max-width: 350px) {
+            left: 65%;
+        }
+    }
+    &__box-desc {
+        margin-bottom: 80px;
+        font-size: 18px;
+        line-height: 21px;
+        @media (max-width: $md3 + px) {
+            font-size: 16px;
+            margin-bottom: 31px;
+        }
+    }
+}
